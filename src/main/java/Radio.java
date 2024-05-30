@@ -7,8 +7,9 @@ public class Radio {
             currentRadioStationNumber++;
             return;
         }
-            currentRadioStationNumber = 0;
-        }
+        currentRadioStationNumber = 0;
+    }
+
     public void previous() {
         if (currentRadioStationNumber != 0) {
             currentRadioStationNumber--;
