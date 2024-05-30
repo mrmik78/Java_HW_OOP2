@@ -18,6 +18,22 @@ public class Radio {
         }
     }
 
+    public void nextVolume() {
+        if (currentVolume != 100) {
+            currentVolume++;
+            return;
+        }
+        currentVolume = 0;
+    }
+
+    public void previousVolume() {
+        if (currentVolume != 0) {
+            currentVolume--;
+        } else {
+            currentVolume = 100;
+        }
+    }
+
     public int getCurrentRadioStationNumber() {
         return currentRadioStationNumber;
     }
@@ -46,7 +62,3 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 }
-
-
-
-
