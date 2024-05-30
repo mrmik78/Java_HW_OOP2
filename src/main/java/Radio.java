@@ -19,19 +19,17 @@ public class Radio {
     }
 
     public void nextVolume() {
-        if (currentVolume != 100) {
-            currentVolume++;
+        if (currentVolume >= 100) {
             return;
         }
-        currentVolume = 0;
+        currentVolume++;
     }
 
     public void previousVolume() {
-        if (currentVolume != 0) {
-            currentVolume--;
-        } else {
-            currentVolume = 100;
+        if (currentVolume <= 0) {
+            return;
         }
+        currentVolume--;
     }
 
     public int getCurrentRadioStationNumber() {
